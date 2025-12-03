@@ -3,7 +3,7 @@
 A machine learning project to predict flight ticket prices based on airline, stops, and departure times.
 
 ## 🎯 Results
-I trained 3 models. **Random Forest and XGBoost** performed the best with ~98% accuracy.
+We trained 3 models. **Random Forest and XGBoost** performed the best with ~98% accuracy.
 
 | Model | Accuracy (R2) |
 |-------|---------------|
