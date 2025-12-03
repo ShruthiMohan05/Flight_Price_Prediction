@@ -34,11 +34,9 @@ The dataset contains information on flight booking options in India.
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
-3. Run the Notebook Open
+3. To see the full analysis and training proces, Open the Notebook:
    ```bash
-   notebooks/ml-project-final(1).ipynb
-to see the full analysis and training process.
-
+   notebooks/ml-project-final(1).ipynb 
  ## 🎯 Results
 We trained 3 models. **Random Forest and XGBoost** performed the best with ~98% accuracy.
 
@@ -50,8 +48,8 @@ We trained 3 models. **Random Forest and XGBoost** performed the best with ~98% 
 
 ## 📊 Visuals
 
-**Price Distribution**\n
+**Price Distribution**:
 Distribution of ticket prices showing a right-skewed trend.
 
-**Correlation Heatmap**\n
+**Correlation Heatmap**:
 Correlation between different features and price.
