@@ -45,10 +45,10 @@ We trained 3 models. **Random Forest and XGBoost** performed the best with ~98% 
 | Random Forest | 98% |
 | XGBoost | 98% |
 
-📊 Visuals
+## 📊 Visuals
 
-Price Distribution
+**Price Distribution**
 Distribution of ticket prices showing a right-skewed trend.
 
-Correlation Heatmap
+**Correlation Heatmap**
 Correlation between different features and price.
