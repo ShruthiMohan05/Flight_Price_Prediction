@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Price Predictor</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            width: 400px;
+            text-align: center;
+        }
+        h2 { color: #333; margin-bottom: 20px; }
+        .form-group { margin-bottom: 15px; text-align: left; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; color: #555; }
+        select, input {
+            width: 100%; padding: 10px; border: 1px solid #ddd;
+            border-radius: 5px; box-sizing: border-box;
+        }
+        button {
+            width: 100%; padding: 12px; background-color: #764ba2;
+            color: white; border: none; border-radius: 5px;
+            font-size: 16px; cursor: pointer; transition: background 0.3s;
+            margin-top: 10px;
+        }
+        button:hover { background-color: #5a3780; }
+        
+        /* The Result Box */
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border: 2px solid #27ae60;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #2e7d32;
+            display: none; /* Hidden until button is clicked */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>✈️ Flight Price Predictor</h2>
+        
+        <form id="predictionForm">
+            <div class="form-group">
+                <label>Airline</label>
+                <select id="airline"><option>IndiGo</option><option>Jet Airways</option></select>
+            </div>
+            <div class="form-group">
+                <label>Source</label>
+                <select id="source"><option>Bangalore</option><option>Delhi</option></select>
+            </div>
+            <div class="form-group">
+                <label>Destination</label>
+                <select id="destination"><option>New Delhi</option><option>Cochin</option></select>
+            </div>
+            <div class="form-group">
+                <label>Date</label>
+                <input type="date" required>
+            </div>
+
+            <button type="submit">Predict Price</button>
+        </form>
+
+        <div id="result">
+            Estimated Price: <span id="priceText">--</span>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('predictionForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Stop page from refreshing
+
+            // 1. Show a popup to prove the button works
+            // alert("Calculating Price..."); 
+
+            // 2. Generate a random price (Since we aren't connected to Python)
+            // This simulates what your model WOULD do.
+            var fakePrice = Math.floor(Math.random() * (12000 - 4000) + 4000);
+
+            // 3. Make the result box visible
+            var resultBox = document.getElementById('result');
+            resultBox.style.display = 'block';
+
+            // 4. Update the text
+            document.getElementById('priceText').innerText = "₹" + fakePrice;
+        });
+    </script>
+
+</body>
+</html>
